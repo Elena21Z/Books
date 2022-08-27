@@ -1,0 +1,135 @@
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.title {
+    font-weight: 500;
+    font-size: 15px;
+   text-align: center;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.img {
+    height: 150px;
+    width: 135px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 75px;
+    
+}
+@media(max-width:780px) {
+    .img {
+      margin-left: 100px;
+      padding-top: 10px;
+    }
+}
+
+.year {
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(2, 63, 35, 0.425);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media(max-width:780px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.authors {
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+   padding-left: 20px;
+   padding-right: 20px;
+   color: rgba(9, 109, 62, 0.973);
+   background-color: rgba(10, 241, 133, 0.151);
+   border-radius: 5px;
+   margin-left: 20px;
+   margin-right: 35px;
+}
+
+.flexButton {
+    display: flex;
+    justify-content: center;
+}
+    .button {
+        color: #0c0c0c;
+        outline: none;
+        background-color: white;
+        border-color: rgba(2, 63, 35, 0.192);
+        border-width: 1px;
+        font-size: 15px;
+        font-weight: 500;
+        width: 250px;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+    }
+    .button:hover {
+        color: rgba(9, 109, 62, 0.973);
+    }
+
+.biblioteka {
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+@media(max-width:780px) {
+    .biblioteka {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.fon-grey {
+    background: rgb(240, 240, 240);
+    height: 655px;
+}
+@media(max-width:780px) {
+    .fon-grey {
+        height: 1800px;
+    }
+}
+
+
+.flex-border {
+    margin-right: 20px;
+}
+
+.border {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px  #d4d4d4;
+    overflow: hidden;
+   margin-right: 20px; 
+   margin-left: 30px;
+    text-align: center;
+    border: none;
+    
+}
+@media(min-width:1024px) {
+    .border {
+        width: 25%;
+        margin-top: 80px;
+    }
+}
+@media(max-width:780px) {
+    .border {
+        margin-top: 45px;
+    }
+}
+
+.fon-white {
+    background-color: white;
+    height: 400px;
+    display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+}
+
