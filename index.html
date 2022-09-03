@@ -14,10 +14,30 @@
 
 <body>
     <div class="fon-grey">
+        <div class="menu-button">
+             <div class="add-save-button">
+                   <button class ="buttonAdd" id="addButton" onclick="openAdd()">Добавить</button>
+                   <button class ="buttonSave" id="saveButton" onclick="openSave()">Сохранить</button>
+                      <div class="container" id="myContainer">
+                          <div class="input-flex">
+                              <div>
+                                 <input class="input" id="nameBook" placeholder="название книги" type="text"/>
+                             </div>
+                                 <input class="input" id="authorBook" placeholder="автор книги" type="text"/>
+                                     <div>
+                                         <input class="input" id="yearpublishingBook" placeholder="год издания книги" type="text"/>
+                                      </div>
+                                          <div>
+                                             <input class="input" id="linkimgBook" placeholder="ссылка на изображение" type="text"/>
+                                         </div>
+                         </div> 
+                    </div>  
+              </div>
+         </div>
         <div class="biblioteka" id="containerBooks">
 
-
 </div>
+
 </div>
     <script src="script.js"></script>
 </body>
