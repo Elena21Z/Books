@@ -118,9 +118,9 @@ function openSave () {
 }
 renderBooks()
 
-const myButton = document.getElementById("addButton")
+const myButton = document.getElementById("saveButton")
 myButton.addEventListener("click", openSave)
 
-const button = document.getElementById("saveButton")
+const button = document.getElementById("addButton")
 button.addEventListener("click", openAdd)
 
