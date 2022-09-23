@@ -96,12 +96,35 @@ html {
     }
 }
 .fon-grey {
-    background: rgb(240, 240, 240);
+    background: rgba(230, 230, 230, 0.247);
     height: 1500px;
 }
 @media(max-width:780px) {
     .fon-grey {
         height: 1800px;
+    }
+}
+
+.title-bookshelf {
+    font-weight: 700;
+   margin: auto;
+   max-width: 1024px;
+   width: 100%;
+}
+@media(min-width:1024px) {
+    .title-bookshelf {
+        font-size: 50px;
+        display: flex;
+        flex-direction: row;
+       justify-content: space-between;
+       padding-top: 100px;
+    }
+}
+@media(max-width: 780px) {
+    .title-bookshelf {
+        font-size: 35px;
+        padding-top: 35px;
+        text-align: center;
     }
 }
 
@@ -118,10 +141,9 @@ html {
 }
 @media(min-width:1024px) {
     .border {
-        width: 25%;
-        margin-top: 50px;
-        margin-right: 20px; 
-        margin-left: 30px;
+        width: 30%;
+        margin-top: 80px;
+        margin-right: 30px;
     }
 }
 @media(max-width:780px) {
@@ -148,67 +170,126 @@ html {
 }
 
 .buttonAdd {
-    color: rgba(9, 109, 62, 0.973);
+    color: white;
     outline: none;
-    background-color:  rgba(9, 109, 62, 0.158);
+    background-color:  rgba(56, 126, 93, 0.801);
     border-color: rgba(255, 255, 255, 0.192);
     box-shadow: 2px 2px 2px  #40404079;
     border-width: 1px;
     border-radius: 5px;
+    font-weight: 600;
     font-size: 15px;
-    font-weight: 500;
-    width: 100px;
     padding-top: 10px;
     padding-bottom: 10px; 
-    margin-right: 50px;
-    margin-top: 20px;
 }
 .buttonAdd:hover {
-    color: rgba(13, 61, 39, 0.973);
+    color: black
+}
+@media(min-width:1024px) {
+    .buttonAdd {
+        width: 200px;
+    }
+}
+@media(max-width:780px) {
+    .buttonAdd {
+        width: 150px;
+        margin-top: 45px;
+       
+    }
 }
 
 .buttonSave {
-    color: rgba(9, 109, 62, 0.973);
+    color: white;
     outline: none;
-    background-color:  rgba(9, 109, 62, 0.158);
+    background-color:  rgb(58, 104, 82);
     border-color: rgba(255, 255, 255, 0.192);
     box-shadow: 2px 2px 2px  #40404079;
     border-width: 1px;
     border-radius: 5px;
     font-size: 15px;
-    font-weight: 500;
-    width: 100px;
+    font-weight: 600;
+    width: 375px;
     padding-top: 10px;
     padding-bottom: 10px; 
-    margin-right: 50px;
-    margin-top: 20px;
-    display: none;
+    margin-top: 10px;
 }
 .buttonSave:hover {
-    color: rgba(13, 61, 39, 0.973);
-}
-
-
-.container {
-    display: none ;
+    color: black;
 }
 
 .menu-button {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: column; 
+}
+@media (min-width: 1024px) {
+    .menu-button {
+        align-items: flex-end;
+    }
+}
+@media (max-width: 780px) {
+    .menu-button {
+        align-items: center;
+    }
 }
 
 .input {
-    padding: 5px 10px 5px 10px;
-    margin-right: 50px;
-    margin-top: 5px;
-    border-color: rgba(255, 255, 255, 0.034);
+    margin-bottom: 10px;
+    padding: 10px 100px 10px 100px;
+    border-color: rgba(255, 255, 255, 0.247);
     box-shadow: 2px 2px 3px  #40404079;
     border-radius: 5px;
+    text-align: center;
 }
 
 .input:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.034);
+    background-color: #3f444436;
+}
+.add-modal {
+    background-color: rgba(133, 134, 134, 0.425);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.add-modal-content {
+    background-color: rgba(71, 128, 101, 0.212);
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.h3 {
+    font-size: 32px;
+    padding-bottom: 25px;
+    color: rgb(48, 80, 64);
+}
+  
+
+.buttonClose {
+    color: white;
+    outline: none;
+    background-color:  rgb(58, 104, 82);
+    border-color: rgba(255, 255, 255, 0.192);
+    box-shadow: 2px 2px 2px  #40404079;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 375px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    margin-top: 10px;
+}
+
+.buttonClose:hover {
+    color: black;
 }

@@ -1,4 +1,5 @@
-const books = [
+// массив книг
+let  books = [
     {
       id: 1,
       title: 'Design Patterns: Elements of Reusable Object-Oriented Software',
@@ -30,7 +31,7 @@ const books = [
     ]
 
     const myBooks = document.getElementById("containerBooks")
-
+// функция добавления массива на страницу
     function renderBooks() {
       myBooks.innerHTML = ""
       books.forEach((book) => {
@@ -55,25 +56,7 @@ const books = [
     }
        
 
-let isOpen = false 
-   function openAdd() {
-     const addButton = document.getElementById("addButton")
-     const saveButton = document.getElementById("saveButton")
-     const container = document.getElementById("myContainer")
- 
-       if (isOpen) {
-       addButton.style.display = "block"
-       container.style.display = "none"
-       saveButton.style.display = "none"
-       isOpen = false
-      } else {
-         saveButton.style.display = "block"
-         container.style.display = "flex"  
-         addButton.style.display = "none"
-         isOpen = true
-       }
-    }
-  
+// функция кнопки "удалить"  
 function clearForm() {
   document.getElementById("nameBook").value = ""
    document.getElementById("authorBook").value = ""
@@ -94,9 +77,13 @@ books.splice(bookIndex, 1)
 
 // шаг 4, обновить список
 renderBooks()
+
+// шаг 5, сохранить в localStorage
+const booksJson = JSON.stringify(books)
+localStorage.setItem("books", booksJson)
 }
 
-
+// функция кнопки "сохранить"
 function openSave () {
   const titleValue = document.getElementById("nameBook").value
   const authorValue = document.getElementById("authorBook").value
@@ -113,14 +100,44 @@ function openSave () {
   books.push(book)
   renderBooks()
   clearForm()
-  openAdd()
+  closeButton()
 
+  const booksJson = JSON.stringify(books)
+  localStorage.setItem('books', booksJson)
+}
+
+
+renderBooks()
+const booksJson = localStorage.getItem('books')
+const savedBooks = JSON.parse(booksJson)
+if (booksJson) {
+  books = savedBooks
 }
 renderBooks()
 
-const myButton = document.getElementById("saveButton")
+
+const myButton = document.getElementById("save-modal-Button")
 myButton.addEventListener("click", openSave)
 
-const button = document.getElementById("addButton")
-button.addEventListener("click", openAdd)
+const button = document.getElementById("open-modal-Button")
+button.addEventListener("click", openModal)
 
+const addModal = document.getElementById("add-modal")
+
+const closeModalButton = document.getElementById("close-modal-Button")
+closeModalButton.addEventListener("click", closeButton)
+
+
+//функция кнопки "закрыть"
+function closeButton() {
+  addModal.style.display = "none"
+}
+
+// функция кнопки "добавить"
+function openModal() {
+  addModal.style.display = "flex"
+}
+
+
+
+ 
