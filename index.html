@@ -14,30 +14,27 @@
 
 <body>
     <div class="fon-grey">
+        <div class="title-bookshelf">Книжная полка
         <div class="menu-button">
              <div class="add-save-button">
-                   <button class ="buttonAdd" id="addButton" onclick="openAdd()">Добавить</button>
-                   <button class ="buttonSave" id="saveButton" onclick="openSave()">Сохранить</button>
+                   <button class ="buttonAdd" id="open-modal-Button" >Добавить книгу</button>
                       <div class="container" id="myContainer">
-                          <div class="input-flex">
-                              <div>
+                          <div class="add-modal" id="add-modal">
+                              <div class="add-modal-content">
+                                <h3 class="h3">Добавить новую книгу</h3>
                                  <input class="input" id="nameBook" placeholder="название книги" type="text"/>
-                             </div>
                                  <input class="input" id="authorBook" placeholder="автор книги" type="text"/>
-                                     <div>
-                                         <input class="input" id="yearpublishingBook" placeholder="год издания книги" type="text"/>
-                                      </div>
-                                          <div>
-                                             <input class="input" id="linkimgBook" placeholder="ссылка на изображение" type="text"/>
-                                         </div>
+                                 <input class="input" id="yearpublishingBook" placeholder="год издания книги" type="text"/>
+                                 <input class="input" id="linkimgBook" placeholder="ссылка на изображение" type="text"/>
+                                 <button class ="buttonSave" id="save-modal-Button">Сохранить</button>
+                                 <button class="buttonClose" id="close-modal-Button">Закрыть</button>
+                                  </div>      
+                                 </div>
                          </div> 
                     </div>  
               </div>
          </div>
-        <div class="biblioteka" id="containerBooks">
-
-</div>
-
+        <div class="biblioteka" id="containerBooks"></div>
 </div>
     <script src="script.js"></script>
 </body>
